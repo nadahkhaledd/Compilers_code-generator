@@ -64,23 +64,23 @@ Start NewExpr
 Start Match
 [5] & (and)
 End NewExpr
+End NewExpr2
 Start Match
 [5] c (ID)
+Start NewExpr2
 Start NewExpr
 Start Match
 [5] ^ (Power)
 End NewExpr
-End NewExpr2
 Start Match
 [5] d (ID)
-Start Factor
 Start NewExpr2
 Start NewExpr
 Start Match
 [5] ; (SemiColon)
 End NewExpr
 End NewExpr2
-End Factor
+End NewExpr2
 End Factor
 End Term
 End MathExpr

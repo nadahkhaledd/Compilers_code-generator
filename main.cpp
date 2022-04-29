@@ -364,11 +364,13 @@ void Match(CompilerInfo* pci, ParseInfo* ppi, TokenType expected_token_type)
 TreeNode* MathExpr(CompilerInfo*, ParseInfo*);
 
 TreeNode* NewExpr(CompilerInfo* pci, ParseInfo* ppi);
+TreeNode* NewExpr2(CompilerInfo* pci, ParseInfo* ppi);
 
-TreeNode* NewExpr2(CompilerInfo* pci, ParseInfo* ppi){
-    pci->debug_file.Out("Start NewExpr2");
+// factor -> newexpr2 { & newexpr2 }  left associative
+TreeNode* Factor(CompilerInfo* pci, ParseInfo* ppi){
+    pci->debug_file.Out("Start Factor");
 
-    TreeNode* tree=NewExpr(pci, ppi);
+    TreeNode* tree=NewExpr2(pci, ppi);
 
     while(ppi->next_token.type==AND)
     {
@@ -379,11 +381,11 @@ TreeNode* NewExpr2(CompilerInfo* pci, ParseInfo* ppi){
 
         new_tree->child[0]=tree;
         Match(pci, ppi, ppi->next_token.type);
-        new_tree->child[1]=NewExpr(pci, ppi);
+        new_tree->child[1]=NewExpr2(pci, ppi);
 
         tree=new_tree;
     }
-    pci->debug_file.Out("End NewExpr2");
+    pci->debug_file.Out("End Factor");
     return tree;
 }
 
@@ -432,12 +434,12 @@ TreeNode* NewExpr(CompilerInfo* pci, ParseInfo* ppi)
     return 0;
 }
 
-// factor -> newexpr { ^ newexpr }    right associative
-TreeNode* Factor(CompilerInfo* pci, ParseInfo* ppi)
+// newexp2 -> newexpr { ^ newexpr }    right associative
+TreeNode* NewExpr2(CompilerInfo* pci, ParseInfo* ppi)
 {
-    pci->debug_file.Out("Start Factor");
+    pci->debug_file.Out("Start NewExpr2");
 
-    TreeNode* tree=NewExpr2(pci, ppi);
+    TreeNode* tree=NewExpr(pci, ppi);
 
     if(ppi->next_token.type==POWER)
     {
@@ -448,12 +450,12 @@ TreeNode* Factor(CompilerInfo* pci, ParseInfo* ppi)
 
         new_tree->child[0]=tree;
         Match(pci, ppi, ppi->next_token.type);
-        new_tree->child[1]=Factor(pci, ppi);
+        new_tree->child[1]=NewExpr2(pci, ppi);
 
-        pci->debug_file.Out("End Factor");
+        pci->debug_file.Out("End NewExpr2");
         return new_tree;
     }
-    pci->debug_file.Out("End Factor");
+    pci->debug_file.Out("End NewExpr2");
     return tree;
 }
 
