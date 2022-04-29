@@ -1,2 +1,0 @@
-Start StmtSeq
-Start Stmt
