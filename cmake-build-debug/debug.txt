@@ -88,11 +88,13 @@ End Expr
 End AssignStmt
 End Stmt
 Start Match
-[6] write (Write)
+[6] resa (ID)
 Start Stmt
-Start WriteStmt
+Start AssignStmt
 Start Match
-[6] res (ID)
+[6] := (Assign)
+Start Match
+[6] a (ID)
 Start Expr
 Start MathExpr
 Start Term
@@ -100,7 +102,1587 @@ Start Factor
 Start NewExpr2
 Start NewExpr
 Start Match
-[6]  (EndFile)
+[6] + (Plus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[6] b (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[6] / (Divide)
+End NewExpr
+End NewExpr2
+End Factor
+Start Match
+[6] c (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[6] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[6] d (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[6] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[7] resb (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[7] := (Assign)
+Start Match
+[7] a (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[7] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[7] b (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[7] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[8] resc (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[8] := (Assign)
+Start Match
+[8] b (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[8] + (Plus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[8] c (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[8] + (Plus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[8] d (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[8] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[8] a (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[8] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[9] resd (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[9] := (Assign)
+Start Match
+[9] a (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[9] ^ (Power)
+End NewExpr
+Start Match
+[9] 2 (Num)
+Start NewExpr2
+Start NewExpr
+Start Match
+[9] & (and)
+End NewExpr
+End NewExpr2
+End NewExpr2
+Start Match
+[9] c (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[9] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[10] rese (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[10] := (Assign)
+Start Match
+[10] c (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[10] ^ (Power)
+End NewExpr
+Start Match
+[10] d (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[10] & (and)
+End NewExpr
+End NewExpr2
+End NewExpr2
+Start Match
+[10] ( (LeftParen)
+Start NewExpr2
+Start NewExpr
+Start Match
+[10] b (ID)
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[10] + (Plus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[10] a (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[10] ) (RightParen)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+Start Match
+[10] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[11] resf (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[11] := (Assign)
+Start Match
+[11] a (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[11] ^ (Power)
+End NewExpr
+Start Match
+[11] b (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[11] & (and)
+End NewExpr
+End NewExpr2
+End NewExpr2
+Start Match
+[11] c (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[11] ^ (Power)
+End NewExpr
+Start Match
+[11] d (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[11] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[12] resg (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[12] := (Assign)
+Start Match
+[12] ( (LeftParen)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[12] c (ID)
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[12] / (Divide)
+End NewExpr
+End NewExpr2
+End Factor
+Start Match
+[12] b (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[12] ) (RightParen)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+Start Match
+[12] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[12] ( (LeftParen)
+Start NewExpr2
+Start NewExpr
+Start Match
+[12] a (ID)
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[12] / (Divide)
+End NewExpr
+End NewExpr2
+End Factor
+Start Match
+[12] b (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[12] ) (RightParen)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+Start Match
+[12] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[13] resh (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[13] := (Assign)
+Start Match
+[13] ( (LeftParen)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[13] a (ID)
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[13] * (Times)
+End NewExpr
+End NewExpr2
+End Factor
+Start Match
+[13] b (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[13] * (Times)
+End NewExpr
+End NewExpr2
+End Factor
+Start Match
+[13] c (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[13] ) (RightParen)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+Start Match
+[13] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[13] ( (LeftParen)
+Start NewExpr2
+Start NewExpr
+Start Match
+[13] a (ID)
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[13] * (Times)
+End NewExpr
+End NewExpr2
+End Factor
+Start Match
+[13] b (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[13] * (Times)
+End NewExpr
+End NewExpr2
+End Factor
+Start Match
+[13] c (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[13] ) (RightParen)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+Start Match
+[13] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[14] resi (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[14] := (Assign)
+Start Match
+[14] c (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[14] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[14] d (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[14] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[14] a (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[14] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[14] b (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[14] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[15] resj (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[15] := (Assign)
+Start Match
+[15] a (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[15] * (Times)
+End NewExpr
+End NewExpr2
+End Factor
+Start Match
+[15] b (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[15] / (Divide)
+End NewExpr
+End NewExpr2
+End Factor
+Start Match
+[15] c (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[15] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[15] d (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[15] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[16] resk (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[16] := (Assign)
+Start Match
+[16] b (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[16] * (Times)
+End NewExpr
+End NewExpr2
+End Factor
+Start Match
+[16] c (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[16] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[16] d (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[16] * (Times)
+End NewExpr
+End NewExpr2
+End Factor
+Start Match
+[16] a (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[16] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[17] resl (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[17] := (Assign)
+Start Match
+[17] a (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[17] - (Minus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[17] b (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[17] + (Plus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[17] c (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[17] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[17] d (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[17] - (Minus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[17] a (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[17] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[18] resm (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[18] := (Assign)
+Start Match
+[18] ( (LeftParen)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[18] d (ID)
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[18] - (Minus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[18] c (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[18] - (Minus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[18] b (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[18] - (Minus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[18] a (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[18] ) (RightParen)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+Start Match
+[18] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[18] a (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[18] ^ (Power)
+End NewExpr
+Start Match
+[18] a (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[18] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[19] resn (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[19] := (Assign)
+Start Match
+[19] ( (LeftParen)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[19] a (ID)
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[19] + (Plus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[19] b (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[19] - (Minus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[19] c (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[19] + (Plus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[19] d (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[19] ) (RightParen)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+Start Match
+[19] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[19] ( (LeftParen)
+Start NewExpr2
+Start NewExpr
+Start Match
+[19] a (ID)
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[19] + (Plus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[19] b (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[19] - (Minus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[19] c (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[19] + (Plus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[19] d (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[19] ) (RightParen)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+Start Match
+[19] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[20] reso (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[20] := (Assign)
+Start Match
+[20] b (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[20] ^ (Power)
+End NewExpr
+Start Match
+[20] 3 (Num)
+Start NewExpr2
+Start NewExpr
+Start Match
+[20] * (Times)
+End NewExpr
+End NewExpr2
+End NewExpr2
+End Factor
+Start Match
+[20] a (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[20] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[20] c (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[20] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[21] resp (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[21] := (Assign)
+Start Match
+[21] c (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[21] - (Minus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[21] a (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[21] / (Divide)
+End NewExpr
+End NewExpr2
+End Factor
+Start Match
+[21] a (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[21] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[21] b (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[21] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[22] resq (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[22] := (Assign)
+Start Match
+[22] b (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[22] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[22] a (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[22] - (Minus)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+Start Match
+[22] b (ID)
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[22] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[23] resr (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[23] := (Assign)
+Start Match
+[23] d (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[23] / (Divide)
+End NewExpr
+End NewExpr2
+End Factor
+Start Match
+[23] a (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[23] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[23] b (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[23] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[24] ress (ID)
+Start Stmt
+Start AssignStmt
+Start Match
+[24] := (Assign)
+Start Match
+[24] ( (LeftParen)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[24] d (ID)
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[24] / (Divide)
+End NewExpr
+End NewExpr2
+End Factor
+Start Match
+[24] a (ID)
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[24] ) (RightParen)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+Start Match
+[24] & (and)
+End NewExpr
+End NewExpr2
+Start Match
+[24] a (ID)
+Start NewExpr2
+Start NewExpr
+Start Match
+[24] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End AssignStmt
+End Stmt
+Start Match
+[25] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[25] res (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[25] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[26] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[26] resa (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[26] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[27] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[27] resb (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[27] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[28] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[28] resc (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[28] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[29] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[29] resd (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[29] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[30] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[30] rese (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[30] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[31] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[31] resf (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[31] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[32] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[32] resg (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[32] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[33] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[33] resh (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[33] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[34] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[34] resi (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[34] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[35] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[35] resj (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[35] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[36] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[36] resk (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[36] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[37] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[37] resl (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[37] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[38] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[38] resm (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[38] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[39] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[39] resn (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[39] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[40] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[40] reso (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[40] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[41] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[41] resp (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[41] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[42] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[42] resq (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[42] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[43] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[43] resr (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[43] ; (SemiColon)
+End NewExpr
+End NewExpr2
+End Factor
+End Term
+End MathExpr
+End Expr
+End WriteStmt
+End Stmt
+Start Match
+[44] write (Write)
+Start Stmt
+Start WriteStmt
+Start Match
+[44] ress (ID)
+Start Expr
+Start MathExpr
+Start Term
+Start Factor
+Start NewExpr2
+Start NewExpr
+Start Match
+[44]  (EndFile)
 End NewExpr
 End NewExpr2
 End Factor

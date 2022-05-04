@@ -4,20 +4,50 @@
 using namespace std;
 
 /*
-{ Sample program
-  in TINY language
-  compute factorial
-}
-
-read x; {input an integer}
-if 0<x then {compute only if x>=1}
-  fact:=1;
-  repeat
-    fact := fact * x;
-    x:=x-1
-  until x=0;
-  write fact {output factorial}
-end
+read a;
+read b;
+read c;
+read d;
+res := a * b & c ^ d;
+resa := a + b / c & d;
+resb := a & b;
+resc := b + c + d & a;
+resd := a ^ 2 & c;
+rese := c ^ d & (b + a);
+resf := a ^ b & c ^ d;
+resg := (c / b) & (a / b);
+resh := (a * b * c) & (a * b * c);
+resi := c & d & a & b;
+resj := a * b / c & d;
+resk := b * c & d * a;
+resl := a - b + c & d - a;
+resm := (d - c - b - a) & a ^ a;
+resn := (a + b - c + d) & (a + b - c + d);
+reso := b ^ 3 * a & c;
+resp := c - a / a & b;
+resq := b & a - b;
+resr := d / a & b;
+ress := (d / a) & a;
+write res;
+write resa;
+write resb;
+write resc;
+write resd;
+write rese;
+write resf;
+write resg;
+write resh;
+write resi;
+write resj;
+write resk;
+write resl;
+write resm;
+write resn;
+write reso;
+write resp;
+write resq;
+write resr;
+write ress
 */
 
 // sequence of statements separated by ;
@@ -180,7 +210,7 @@ const char* TokenTypeStr[]=
                 "LeftBrace", "RightBrace",
                 "ID", "Num",
                 "EndFile", "Error",
-                "and"
+                "and" //  new operator
         };
 
 struct Token
@@ -222,7 +252,7 @@ const Token symbolic_tokens[]=
                 Token(RIGHT_PAREN, ")"),
                 Token(LEFT_BRACE, "{"),
                 Token(RIGHT_BRACE, "}"),
-                Token(AND, "&")
+                Token(AND, "&") // new operator token
         };
 const int num_symbolic_tokens=sizeof(symbolic_tokens)/sizeof(symbolic_tokens[0]);
 
@@ -305,7 +335,7 @@ void GetNextToken(CompilerInfo* pci, Token* ptoken)
 // expr -> mathexpr [ (<|=) mathexpr ]
 // mathexpr -> term { (+|-) term }    left associative
 // term -> factor { (*|/) factor }    left associative
-// factor -> newexpr2 { & newexpr2 }
+// factor -> newexpr2 { & newexpr2 }  left associative
 // newexp2 -> newexpr { ^ newexpr }    right associative
 // newexpr -> ( mathexpr ) | number | identifier
 
@@ -868,7 +898,8 @@ int Power(int a, int b)
     if(b>=1) return a*Power(a, b-1);
     return 0;
 }
-// HERE
+
+// a & b
 int And(int a, int b)
 {
     int a2 = Power(a,2);
@@ -890,7 +921,7 @@ int Evaluate(TreeNode* node, SymbolTable* symbol_table, int* variables)
     if(node->oper==MINUS) return a-b;
     if(node->oper==TIMES) return a*b;
     if(node->oper==DIVIDE) return a/b;
-    if(node->oper==AND) return And(a,b);
+    if(node->oper==AND) return And(a,b); // evaluating new operator &
     if(node->oper==POWER) return Power(a,b);
     throw 0;
     return 0;
